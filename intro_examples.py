@@ -8,7 +8,6 @@ soup = BeautifulSoup(html, 'html.parser')
 
 elements = soup.select('p')
 
-# print(elements)
 n=0
 for element in elements:
     print(f"\nElement {n+1}")

@@ -1,19 +1,5 @@
 from bs4 import BeautifulSoup
 
-html2 = """
-<html>
-<body>
-<p>
-Hello   world
-</p>
-<p>
-Hello
-world
-</p>
-</body>
-</html>
-"""
-
 filename = "html_example.html"
 with open(filename, "r", encoding="utf-8") as file:
     html = file.read()

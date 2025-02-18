@@ -4,16 +4,18 @@ import json
 
 url = 'https://bme.uniwa.gr'
 
-# 1ος τρόπος (απαιτεί σύνδεση στο ίντερνετ)
+# 1ος τρόπος (απαιτεί σύνδεση στο ίντερνετ)---------------------------
 # Μέσω web scraping από HTML ιστοσελίδας:
 # data = requests.get(url)
 # html = data.text
+# --------------------------------------------------------------------
 
-# 2ος τρόπος (λειτουργεί offline)
+# 2ος τρόπος (λειτουργεί offline)-------------------------------------
 # Μέσω scraping από κατεβασμένο HTML:
 filename = "bme_page.html"
 with open(filename, "r", encoding="utf-8") as file:
     html = file.read()
+# --------------------------------------------------------------------
 
 soup = BeautifulSoup(html, 'html.parser')
 

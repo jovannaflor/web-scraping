@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 
-filename = "bme_table.html"
+filename = "html/bme_table.html"
 with open(filename, "r", encoding="utf-8") as file:
     html = file.read()
 

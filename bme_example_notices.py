@@ -12,7 +12,7 @@ url = 'https://bme.uniwa.gr'
 
 # 2ος τρόπος (λειτουργεί offline)-------------------------------------
 # Μέσω scraping από κατεβασμένο HTML:
-filename = "bme_page.html"
+filename = "html/bme_page.html"
 with open(filename, "r", encoding="utf-8") as file:
     html = file.read()
 # --------------------------------------------------------------------

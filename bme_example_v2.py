@@ -1,6 +1,16 @@
 from bs4 import BeautifulSoup
+# import requests
 import json
 
+url = 'https://bme.uniwa.gr'
+
+# 1ος τρόπος (απαιτεί σύνδεση στο ίντερνετ)
+# Μέσω web scraping από HTML ιστοσελίδας:
+# data = requests.get(url)
+# html = data.text
+
+# 2ος τρόπος (λειτουργεί offline)
+# Μέσω scraping από κατεβασμένο HTML:
 filename = "bme_page.html"
 with open(filename, "r", encoding="utf-8") as file:
     html = file.read()
@@ -44,7 +54,7 @@ if links_li:
     hyperlinks["text"] = txt_li[0]
     hyperlinks["href"] = links_li[0]
     
-    filename = "data/urls2.json"
+    filename = "data/urls.json"
     
     with open(filename, 'w', encoding="utf-8") as f:
         json.dump(hyperlinks,f, ensure_ascii=False, indent=4)

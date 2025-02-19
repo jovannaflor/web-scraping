@@ -20,5 +20,5 @@ for row in tables:
 
 df = pd.DataFrame(data)
 
-filename = "data/bme_table.xlsx"
+filename = "output/bme_table.xlsx"
 df.to_excel(filename, index=False, header=False)

@@ -13,10 +13,8 @@ containers = soup.select('.bmi-table')
 for container in containers:
     print(container.prettify())
 
-print(f'Αριθμός των container με αυτή την κλάση: {len(containers)}')
-
 # 1ος τρόπος
-table = soup.find_all("tr")
+table = soup.find_all("tr") # ή table
 
 data = []
 for row in table:
@@ -33,10 +31,11 @@ df1 = pd.DataFrame(data, columns=headers)
 # 2ος τρόπος - με pandas + StringIO:
 table = soup.select_one(".bmi-table")
 table_io = StringIO(str(table))
-df2 = pd.read_html(table_io)[0]
+df2 = pd.read_html(table_io)[0] # [0] -> για να τραβήξει μόνο το 1ο table
 
 print(df1, "\n")
 print(df2)
 
-filename = "data/example_table.csv"
+# Αποθήκευση σε αρχείο CSV
+filename = "output/example_table.csv"
 df1.to_csv(filename, index=False, header=True)

@@ -56,7 +56,7 @@ if links_li:
     hyperlinks["text"] = txt_li[0]
     hyperlinks["href"] = links_li[0]
     
-    filename = "data/urls.json"
+    filename = "output/urls.json"
     
     with open(filename, 'w', encoding="utf-8") as f:
         json.dump(hyperlinks,f, ensure_ascii=False, indent=4)

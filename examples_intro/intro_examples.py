@@ -19,3 +19,11 @@ for element in elements:
     print("\nWith strip:")
     print(element.get_text(strip=True))
     # Εναλλακτικά: element.get_text().strip() -> ισοδύναμο
+
+# Προφορικά
+# print('\n')
+# elements_source = soup.select('.source-1')
+# print(len(elements_source), '\n')
+
+# elements_content = soup.select('.content')
+# print(len(elements_content)) # πόσες φορές εμφανίζεται αυτή η κλάση

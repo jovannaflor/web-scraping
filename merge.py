@@ -3,7 +3,9 @@ from io import StringIO
 import pandas as pd
 import json
 
+
 choice = 1
+
 
 if choice == 1:
 
@@ -28,7 +30,9 @@ if choice == 1:
         # Εναλλακτικά:
         # element.get_text().strip() # -> ισοδύναμο
 
+
 elif choice == 2:
+
     filename = "html/html_example.html"
     with open(filename, "r", encoding="utf-8") as file:
         html = file.read()
@@ -67,7 +71,9 @@ elif choice == 2:
     filename = "output/example_table.csv"
     df1.to_csv(filename, index=False, header=True)
 
+
 elif choice == 3:
+
     filename = "html/bme_table.html"
     with open(filename, "r", encoding="utf-8") as file:
         html = file.read()
@@ -90,7 +96,9 @@ elif choice == 3:
     filename = "output/bme_table.xlsx"
     df.to_excel(filename, index=False, header=False)
 
+
 elif choice == 4:
+
     # import requests
 
     # 1ος τρόπος (απαιτεί σύνδεση στο ίντερνετ)---------------------------
@@ -102,7 +110,7 @@ elif choice == 4:
     # --------------------------------------------------------------------
 
     # 2ος τρόπος (λειτουργεί offline)-------------------------------------
-    
+
     # Μέσω scraping από κατεβασμένο HTML:
     filename = "html/bme_notices.html"
     with open(filename, "r", encoding="utf-8") as file:

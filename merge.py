@@ -6,7 +6,7 @@ import json
 choice = 0
 while choice <1 or choice >4:
     try:
-        choice = int(input('Choice?'))
+        choice = int(input('Choice? '))
     except ValueError:
         print("Παρακαλώ εισάγεται αριθμό (1-4).")
 

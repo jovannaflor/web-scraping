@@ -3,8 +3,12 @@ from io import StringIO
 import pandas as pd
 import json
 
-
-choice = 1
+choice = 0
+while choice <1 or choice >4:
+    try:
+        choice = int(input('Choice?'))
+    except ValueError:
+        print("Παρακαλώ εισάγεται αριθμό (1-4).")
 
 
 if choice == 1:

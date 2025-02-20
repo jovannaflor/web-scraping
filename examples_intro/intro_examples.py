@@ -6,8 +6,8 @@ with open(filename, "r", encoding="utf-8") as file:
 
 soup = BeautifulSoup(html, 'html.parser')
 
-# elements = soup.find_all("p", class_="text-1")
 elements = soup.select('p.text-1')
+# elements = soup.find_all("p", class_="text-1") # -> ισοδύναμο
 
 # Το prettify() γίνεται by default στο Spyder
 print(soup.prettify())
@@ -18,7 +18,8 @@ for element in elements:
     print(element.text)
     print("\nWith strip:")
     print(element.get_text(strip=True))
-    # Εναλλακτικά: element.get_text().strip() -> ισοδύναμο
+    # Εναλλακτικά:
+    # element.get_text().strip() # -> ισοδύναμο
 
 # Προφορικά
 # print('\n')

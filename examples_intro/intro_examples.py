@@ -21,6 +21,14 @@ for element in elements:
     # Εναλλακτικά:
     # element.get_text().strip() # -> ισοδύναμο
 
+articles = soup.select('a')
+
+for article in articles:
+    a_link = article.get('href')
+    a_txt = article.get_text(strip=True)
+
+print(f"\n{a_txt}\n{a_link}")
+
 # Προφορικά
 # print('\n')
 # elements_source = soup.select('.source-1')

@@ -10,7 +10,6 @@ while choice <1 or choice >4:
     except ValueError:
         print("Παρακαλώ εισάγεται αριθμό (1-4).")
 
-
 if choice == 1:
 
     filename = "html/html_example.html"

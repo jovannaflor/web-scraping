@@ -4,7 +4,7 @@ import pandas as pd
 import json
 
 choice = 0
-while choice <1 or choice >4:
+while choice <1 or choice >6:
     try:
         choice = int(input("Choice? "))
     except ValueError:
@@ -122,6 +122,44 @@ elif choice == 4:
     # 2ος τρόπος (λειτουργεί offline)-------------------------------------
 
     # Μέσω scraping από κατεβασμένο HTML:
+    filename = "html/bme_main_page.html"
+    with open(filename, "r", encoding="utf-8") as file:
+        html = file.read()
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    containers = soup.select('.latest_post_text_inner') # container that contains h5 containers
+
+    all_h5 = []
+    all_headings = []
+
+    for container in containers:
+        headings = container.select('h5')
+        all_headings.append(headings)
+        for heading in headings:
+            heading_txt = heading.get_text(strip=True)
+            all_h5.append(heading_txt)
+            print(heading_txt)
+
+elif choice == 5:
+
+    filename = "html/bme_main_page.html"
+    with open(filename, "r", encoding="utf-8") as file:
+        html = file.read()
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    containers = soup.select('h5.latest_post_title') # all containers with h5
+
+    all_h5 = []
+
+    for heading in containers:
+        heading_txt = heading.get_text(strip=True)
+        all_h5.append(heading_txt)
+        print(heading_txt)
+
+elif choice == 6:
+
     filename = "html/bme_notices.html"
     with open(filename, "r", encoding="utf-8") as file:
         html = file.read()

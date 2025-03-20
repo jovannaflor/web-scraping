@@ -22,7 +22,7 @@ if choice == 1:
     # elements = soup.find_all("p", class_="text-1") # -> ισοδύναμο
 
     # Το prettify() γίνεται by default στο Spyder
-    print(soup.prettify())
+    print(soup)
     print(elements)
 
     for element in elements:

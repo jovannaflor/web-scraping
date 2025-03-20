@@ -8,7 +8,7 @@ html = data.text
 
 soup = BeautifulSoup(html, "html.parser")
 
-containers = soup.select('h5.latest_post_title')
+containers = soup.select('h5.latest_post_title') # all containers with h5
 
 all_h5 = []
 

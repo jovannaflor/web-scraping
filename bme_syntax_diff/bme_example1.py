@@ -8,12 +8,14 @@ html = data.text
 
 soup = BeautifulSoup(html, "html.parser")
 
-containers = soup.select('.latest_post_title')
+containers = soup.select('.latest_post_text_inner') # container that contains h5 containers
 
 all_h5 = []
+all_headings = []
 
 for container in containers:
-    headings = containers.find_all('h5')
+    headings = container.select('h5')
+    all_headings.append(headings)
     for heading in headings:
         heading_txt = heading.get_text(strip=True)
         all_h5.append(heading_txt)

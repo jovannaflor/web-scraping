@@ -1,6 +1,7 @@
 # Introduction to Web Scraping using Python
 
-This repository was created for the **BME Workshop 2025** organized by the **IEEE Student Branch of UniWA**.  
+This repository was created for the **BME Workshop 2025** organized by the **IEEE Student Branch of UniWA**.
+
 Author: **Ioanna Floraki**, 4th-year Biomedical Engineering student at UniWA
 
 ## Overview
